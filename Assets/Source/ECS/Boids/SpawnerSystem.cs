@@ -33,7 +33,7 @@ public partial struct SpawnerSystem : ISystem
 
     private void ProcessSpawner(ref SystemState state, RefRW<Spawner> spawner)
     {
-        // TODO Registering Boid configurations
+        BoidSystem.BoidConfigs[spawner.ValueRO.BoidConfigIndex] = spawner.ValueRO.BoidConfiguration;
         
         if (spawner.ValueRO.NextSpawnTime < SystemAPI.Time.ElapsedTime)
         {
