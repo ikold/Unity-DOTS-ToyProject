@@ -11,6 +11,7 @@ public class BoidAuthoring : MonoBehaviour
             
             AddComponent<BoidComponent>(entity);
             AddComponent<StateComponent>(entity);
+            AddComponent<QuadrantEntity>(entity);
         }
     }
 }
